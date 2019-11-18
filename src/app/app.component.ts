@@ -10,7 +10,7 @@ export class AppComponent {
 constructor(private http:HttpClient) {
 	
 	this.http.get('/apihost').subscribe((_data: any) => {
-               
+               debugger
             this.myapidata = _data['value']['joke'];
             },
             (err: any) => {
