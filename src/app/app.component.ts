@@ -11,7 +11,7 @@ constructor(private http:HttpClient) {
 	
 	this.http.get('/apihost').subscribe((_data: any) => {
                
-            this.myapidata = _data;
+            this.myapidata = JSON.stringify(_data);
             },
             (err: any) => {
 
