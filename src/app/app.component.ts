@@ -9,9 +9,8 @@ export class AppComponent {
 	myapidata: any;
 constructor(private http:HttpClient) {
 	
-	this.http.get('/testme').subscribe((_data: any) => {
-               debugger
-            this.myapidata = JSON.stringify(_data);
+	this.http.get('/testme').subscribe((_data: any) => {               
+            this.myapidata = _data['value']['joke'];
             },
             (err: any) => {
 
