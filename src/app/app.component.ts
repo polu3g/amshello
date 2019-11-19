@@ -13,7 +13,7 @@ constructor(private http:HttpClient) {
             this.myapidata = _data['value']['joke'];
             },
             (err: any) => {
-
+             debugger
             });
 	
     }
